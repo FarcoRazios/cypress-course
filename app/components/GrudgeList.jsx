@@ -40,7 +40,7 @@ export default function GrudgeList() {
 
     return (
         <div style={{ margin: '20px' }}>
-            <h3 style={{ margin: '20px 0px' }}>{title}</h3>
+            <h3 data-test="grudge-list-title" style={{ margin: '20px 0px' }}>{title}</h3>
             <div>
                 <TextField
                     label="Add Grudge"
@@ -73,7 +73,9 @@ export default function GrudgeList() {
                 }
             </ul>
             {
-                grudges.length > 0 && <Button onClick={clearGrudges}>Clear</Button>
+                grudges.length > 0 && <Button
+                    data-test="clear-button"
+                    onClick={clearGrudges}>Clear</Button>
             }
         </div>
     )
